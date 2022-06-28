@@ -1,0 +1,12 @@
+version: '3.4'
+
+services:
+  erc721identity:
+    image: erc721identity
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      NODE_ENV: production
+      API_KEY : ${API_KEY}
+      RPC_NODE : ${RPC_NODE}
